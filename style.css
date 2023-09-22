@@ -1,0 +1,220 @@
+@media screen and (min-width: 375px) and (max-width: 1439px) {
+    * {
+        margin: 0;
+        font-family: 'Manrope', sans-serif;
+    }
+
+    html {
+        height: 100%;
+    }
+
+    body {
+        background-color: hsl(210, 46%, 95%);
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 320px;
+        margin-top: 32px;
+        margin-bottom: 16px;
+    }
+
+    main > img {
+        border-radius: 16px 16px 0px 0px;
+    }
+
+    section {
+        background-color: #FFFFFF;
+        padding: 32px;
+        border-radius: 0px 0px 16px 16px;
+    }
+
+    #text {
+        width: 256px;
+    }
+
+    #bold_intro {
+        margin-bottom: 16px;
+    }
+
+    #bold_intro > b {
+        color: hsl(217, 19%, 35%);
+        font-size: larger;
+    }
+
+    p {
+        font-size: 13px;
+        color: hsl(217, 19%, 35%);
+    }
+
+    #bottom_banner {
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        align-items: center;
+        margin-top: 16px;
+    }
+
+    #thumbnail {
+        width: 50px;
+        border-radius: 25px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    #bottom_banner > p {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        margin-left: 16px;
+    }
+
+    #name {
+        font-size: 13px;
+    }
+
+    #date {
+        color: hsl(212, 23%, 69%);
+    }
+
+    #share_icon {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        background-color: hsl(210, 46%, 95%);
+        padding: 8px;
+        border-radius: 24px;
+        justify-self: end;
+    }
+
+    footer {
+        margin-bottom: 32px;
+    }
+
+    footer > p {
+        font-size: 11px;
+        text-align: center;
+    }
+
+    footer a {
+        color: hsl(217 19% 35%);
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    footer a:visited {
+        text-decoration: none
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    * {
+        margin: 0;
+        font-family: 'Manrope', sans-serif;
+    }
+
+    html {
+        height: 100%;
+        display: flex;
+    }
+
+    body {
+        background-color: hsl(210, 46%, 95%);
+        margin: auto;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 16px;
+        height: 280px;
+    }
+
+    main > img {
+        object-fit: contain;
+        border-radius: 16px 0px 0px 16px;
+    }
+
+    section {
+        background-color: #FFFFFF;
+        padding-left: 32px;
+        padding-right: 32px;
+        border-radius: 0px 16px 16px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #text {
+        width: 360px;
+    }
+
+    #bold_intro {
+        margin-bottom: 16px;
+    }
+
+    #bold_intro > b {
+        color: hsl(217, 19%, 35%);
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 13px;
+        color: hsl(217 19% 35%);
+    }
+
+    #bottom_banner {
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        align-items: center;
+        margin-top: 16px;
+    }
+
+    #thumbnail {
+        width: 50px;
+        border-radius: 25px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    #bottom_banner > p {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    #name {
+        font-size: 13px;
+    }
+
+    #date {
+        color: hsl(212, 23%, 69%);
+    }
+
+    #share_icon {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        background-color: hsl(210, 46%, 95%);
+        padding: 8px;
+        border-radius: 24px;
+        justify-self: end;
+    }
+
+    footer > p {
+        font-size: 11px;
+        text-align: center;
+    }
+
+    footer a {
+        color: hsl(217 19% 35%);
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    footer a:visited {
+        text-decoration: none;
+    }
+}
