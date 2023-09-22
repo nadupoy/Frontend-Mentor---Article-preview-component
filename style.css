@@ -4,214 +4,157 @@
         font-family: 'Manrope', sans-serif;
     }
 
-    html {
-        height: 100%;
-    }
-
     body {
         background-color: hsl(210, 46%, 95%);
-        display: flex;
-        flex-direction: column;
+        display: grid;
     }
 
     main {
         display: flex;
         flex-direction: column;
-        margin: auto;
         width: 320px;
+        margin: auto;
         margin-top: 32px;
         margin-bottom: 16px;
     }
 
     main > img {
+        object-fit: cover;
+        object-position: 50% 25%;
+        height: 220px;
         border-radius: 16px 16px 0px 0px;
     }
 
     section {
         background-color: #FFFFFF;
-        padding: 32px;
-        border-radius: 0px 0px 16px 16px;
+        display: grid;
+        justify-content: center;
+        /* padding-bottom: 24px; */
     }
 
-    #text {
+    #header-text {
+        font-weight: 700;
+        font-size: 16px;
+        color: hsl(217, 19%, 35%);
         width: 256px;
-    }
-
-    #bold_intro {
+        margin-top: 32px;
         margin-bottom: 16px;
     }
 
-    #bold_intro > b {
-        color: hsl(217, 19%, 35%);
-        font-size: larger;
-    }
-
-    p {
+    #body-text {
+        font-weight: 500;
         font-size: 13px;
-        color: hsl(217, 19%, 35%);
+        color: hsl(214, 17%, 51%);
+        width: 256px;
+        margin-bottom: 16px;
+        line-height: 1.5;
     }
 
-    #bottom_banner {
+    .bottom-banner {
         display: grid;
-        grid-template-columns: 20% 60% 20%;
+        grid-template-columns: 75% 25%;
         align-items: center;
-        margin-top: 16px;
+        background-color: #FFFFFF;
+        padding-bottom: 16px;
+        border-radius: 0px 0px 16px 16px;
     }
 
-    #thumbnail {
-        width: 50px;
-        border-radius: 25px;
-        grid-column-start: 1;
-        grid-column-end: 2;
+    .bottom-banner-focus {
+        display: grid;
+        grid-template-columns: 75% 25%;
+        align-items: center;
+        background-color:hsl(217, 19%, 35%);
+        border-radius: 0px 0px 16px 16px;
     }
 
-    #bottom_banner > p {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        margin-left: 16px;
+    .user-details-hidden {
+        display: none;
     }
 
-    #name {
+    .user-details {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        align-items: center;
+        height: 64px;
+        margin-left: 32px;
+    }
+
+    .user-details > img {
+        width: 48px;
+        border-radius: 32px;
+    }
+
+    .user-details > p {
         font-size: 13px;
+        font-weight: 700;
+        color: hsl(217, 19%, 35%);
     }
 
-    #date {
+    span {
+        font-weight: 500;
         color: hsl(212, 23%, 69%);
     }
 
-    #share_icon {
-        grid-column-start: 3;
-        grid-column-end: 4;
+    .social-media-icons {
+        display: none;
+    }
+
+    .social-media-icons-visible {
+        display: grid;
+        grid-template-columns: auto 10% 10% 10%;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
+        color: #FFFFFF;
+        height: 64px;
+    }
+
+    .social-media-icons > p {
+        font-size: 16px;
+        font-weight: 200;
+    }
+
+    .social-media-icon {
+        font-size: 32px;
+    }
+
+    .share-button {
+        justify-self: start;
         background-color: hsl(210, 46%, 95%);
-        padding: 8px;
+        padding: 10px 13px;
         border-radius: 24px;
-        justify-self: end;
+    }
+
+    .share-button-focus {
+        justify-self: start;
+        padding: 10px 13px;
+        background-color: hsl(214, 17%, 51%);
+        border-radius: 24px;
+    }
+
+    .share-icon {
+        color: hsl(217, 19%, 35%);
+    }
+
+    .share-icon-focus {
+        color: #FFFFFF;
     }
 
     footer {
+        margin: auto;
         margin-bottom: 32px;
     }
 
     footer > p {
-        font-size: 11px;
         text-align: center;
+        font-size: 11px;
+        color:hsl(214, 17%, 51%);
     }
 
     footer a {
-        color: hsl(217 19% 35%);
-        text-decoration: none;
+        color:hsl(217, 19%, 35%);
         font-weight: 700;
-    }
-
-    footer a:visited {
-        text-decoration: none
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    * {
-        margin: 0;
-        font-family: 'Manrope', sans-serif;
-    }
-
-    html {
-        height: 100%;
-        display: flex;
-    }
-
-    body {
-        background-color: hsl(210, 46%, 95%);
-        margin: auto;
-        display: grid;
-        justify-content: center;
-        align-items: center;
-    }
-
-    main {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 16px;
-        height: 280px;
-    }
-
-    main > img {
-        object-fit: contain;
-        border-radius: 16px 0px 0px 16px;
-    }
-
-    section {
-        background-color: #FFFFFF;
-        padding-left: 32px;
-        padding-right: 32px;
-        border-radius: 0px 16px 16px 0px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    #text {
-        width: 360px;
-    }
-
-    #bold_intro {
-        margin-bottom: 16px;
-    }
-
-    #bold_intro > b {
-        color: hsl(217, 19%, 35%);
-        font-size: 20px;
-    }
-
-    p {
-        font-size: 13px;
-        color: hsl(217 19% 35%);
-    }
-
-    #bottom_banner {
-        display: grid;
-        grid-template-columns: 20% 60% 20%;
-        align-items: center;
-        margin-top: 16px;
-    }
-
-    #thumbnail {
-        width: 50px;
-        border-radius: 25px;
-        grid-column-start: 1;
-        grid-column-end: 2;
-    }
-
-    #bottom_banner > p {
-        grid-column-start: 2;
-        grid-column-end: 3;
-    }
-
-    #name {
-        font-size: 13px;
-    }
-
-    #date {
-        color: hsl(212, 23%, 69%);
-    }
-
-    #share_icon {
-        grid-column-start: 3;
-        grid-column-end: 4;
-        background-color: hsl(210, 46%, 95%);
-        padding: 8px;
-        border-radius: 24px;
-        justify-self: end;
-    }
-
-    footer > p {
-        font-size: 11px;
-        text-align: center;
-    }
-
-    footer a {
-        color: hsl(217 19% 35%);
         text-decoration: none;
-        font-weight: 700;
     }
 
     footer a:visited {
