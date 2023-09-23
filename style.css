@@ -4,90 +4,76 @@
         font-family: 'Manrope', sans-serif;
     }
 
+    html {
+        height: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
     body {
         background-color: hsl(210, 46%, 95%);
-        display: grid;
     }
 
     main {
+        width: 320px;
         display: flex;
         flex-direction: column;
-        width: 320px;
-        margin: auto;
-        margin-top: 32px;
+        /* margin-top: 32px; */
         margin-bottom: 16px;
     }
 
     main > img {
+        height: 200px;
         object-fit: cover;
         object-position: 50% 25%;
-        height: 220px;
         border-radius: 16px 16px 0px 0px;
     }
 
     section {
         background-color: #FFFFFF;
-        display: grid;
-        justify-content: center;
-        /* padding-bottom: 24px; */
+        padding-bottom: 16px;
+        border-radius: 0px 0px 16px 16px;
+    }
+
+    section > p {
+        width: 256px;
+        margin: auto;
     }
 
     #header-text {
         font-weight: 700;
-        font-size: 16px;
         color: hsl(217, 19%, 35%);
-        width: 256px;
         margin-top: 32px;
         margin-bottom: 16px;
     }
 
     #body-text {
-        font-weight: 500;
         font-size: 13px;
+        font-weight: 500;
         color: hsl(214, 17%, 51%);
-        width: 256px;
-        margin-bottom: 16px;
         line-height: 1.5;
+        margin-bottom: 16px;
     }
 
-    .bottom-banner {
+    div {
+        width: 256px;
+        margin: auto;
         display: grid;
-        grid-template-columns: 75% 25%;
-        align-items: center;
-        background-color: #FFFFFF;
-        padding-bottom: 16px;
-        border-radius: 0px 0px 16px 16px;
+        grid-template-columns: 20% 60% 20%;
     }
 
-    .bottom-banner-focus {
-        display: grid;
-        grid-template-columns: 75% 25%;
-        align-items: center;
-        background-color:hsl(217, 19%, 35%);
-        border-radius: 0px 0px 16px 16px;
-    }
-
-    .user-details-hidden {
-        display: none;
-    }
-
-    .user-details {
-        display: grid;
-        grid-template-columns: 30% 70%;
-        align-items: center;
-        height: 64px;
-        margin-left: 32px;
-    }
-
-    .user-details > img {
+    div > img {
         width: 48px;
-        border-radius: 32px;
+        border-radius: 24px;
     }
 
-    .user-details > p {
+    div > p {
+        align-self: center;
         font-size: 13px;
         font-weight: 700;
         color: hsl(217, 19%, 35%);
+        margin-left: 8px;
     }
 
     span {
@@ -95,223 +81,60 @@
         color: hsl(212, 23%, 69%);
     }
 
+    .show-dialog {
+        border: none;
+        width: 290px;
+        display: grid;
+        grid-template-columns: 25% 15% 15% 15% auto;
+        align-items: center;
+        background-color: hsl(217, 19%, 35%);
+        color: #FFFFFF;
+        margin: auto;
+        border-radius: 0px 0px 16px 16px;
+    }
+
+    dialog > p {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        margin-left: 16px;
+    }
+
     .social-media-icons {
-        display: none;
-    }
-
-    .social-media-icons-visible {
-        display: grid;
-        grid-template-columns: auto 10% 10% 10%;
-        align-items: center;
-        justify-content: space-evenly;
-        height: 100%;
-        color: #FFFFFF;
-        height: 64px;
-    }
-
-    .social-media-icons > p {
-        font-size: 16px;
-        font-weight: 200;
-    }
-
-    .social-media-icon {
-        font-size: 32px;
-    }
-
-    .share-button {
-        justify-self: start;
-        background-color: hsl(210, 46%, 95%);
-        padding: 10px 13px;
-        border-radius: 24px;
-    }
-
-    .share-button-focus {
-        justify-self: start;
-        padding: 10px 13px;
-        background-color: hsl(214, 17%, 51%);
-        border-radius: 24px;
-    }
-
-    .share-icon {
-        color: hsl(217, 19%, 35%);
-    }
-
-    .share-icon-focus {
-        color: #FFFFFF;
-    }
-
-    footer {
-        margin: auto;
-        margin-bottom: 32px;
-    }
-
-    footer > p {
-        text-align: center;
-        font-size: 11px;
-        color:hsl(214, 17%, 51%);
-    }
-
-    footer a {
-        color:hsl(217, 19%, 35%);
-        font-weight: 700;
-        text-decoration: none;
-    }
-
-    footer a:visited {
-        text-decoration: none;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    * {
-        margin: 0;
-        font-family: 'Manrope', sans-serif;
-    }
-
-    html {
-        height: 100%;
-        display: flex;
-    }
-
-    body {
-        margin: auto;
-        background-color: hsl(210, 46%, 95%);
-        display: grid;
-        align-items: center;
-    }
-
-    main {
-        display: flex;
-        flex-direction: row;
-        margin: auto;
-        height: 320px;
-        margin-bottom: 16px;
-        /* Flex conforms the height of the img element to 360px as opposed to Grid which doesn't do so. */
-    }
-
-    main > img {
-        object-fit: cover;
-        border-radius: 16px 0px 0px 16px;
-    }
-
-    section {
-        width: 500px;
-        background-color: #FFFFFF;
-        border-radius: 0px 16px 16px 0px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    #text {
-        margin-left: 48px;
-    }
-
-    #header-text {
-        font-weight: 700;
         font-size: 24px;
-        color: hsl(217, 19%, 35%);
-        width: 420px;
-        margin-bottom: 16px;
+        justify-self: center;
     }
 
-    #body-text {
-        font-weight: 500;
-        font-size: 13px;
-        color: hsl(214, 17%, 51%);
-        width: 360px;
-        line-height: 1.5;
-        margin-bottom: 16px;
+    button {
+        background-color: hsl(210, 46%, 95%);
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        align-self: center;
+        z-index: 1;
     }
 
-    .bottom-banner {
-        width: 420px;
-        display: grid;
-        grid-template-columns: auto 64px;
-        align-items: center;
-        margin-left: 48px;
-    }
-
-    .user-details {
-        display: grid;
-        grid-template-columns: 20% 80%;
-        height: 64px;
-        align-items: center;
-    }
-
-    .user-details > img {
-        width: 48px;
-        border-radius: 32px;
-    }
-
-    .user-details > p {
-        font-size: 13px;
-        font-weight: 700;
-        color:hsl(217, 19%, 35%);
-    }
-
-    span {
-        font-weight: 500;
-        color:hsl(212, 23%, 69%);
-    }
-
-    .social-media-icons {
-        /* display: none; */
-    }
-
-    .social-media-icons-visible {
-        position: absolute;
-        display: grid;
-        grid-template-columns: auto 64px 64px 64px;
-        align-items: center;
-        height: 64px;
+    .dialog-visible {
         background-color: hsl(214, 17%, 51%);
         color: #FFFFFF;
-        padding-left: 16px;
-        border-radius: 16px;
-        transform-origin: center bottom;
-        transform: translateX(260px);
-        transform: translateY(40px);
     }
 
-    .social-media-icons > p {
-        font-size: 16px;
-        font-weight: 200;
-        color: #FFFFFF;
-    }
-
-    .social-media-icon {
-        font-size: 32px;
-        justify-self: center;
-    }
-
-    .share-button {
-        justify-self: center;
-        background-color: hsl(210, 46%, 95%);
-        padding: 10px 13px;
-        border-radius: 24px;
-    }
-
-    .share-button-focus {
-
-    }
-
-    .share-icon {
+    #share-icon {
         color: hsl(217, 19%, 35%);
     }
 
-    .share-icon-focus {
+    .icon-dialog-visible {
         color: #FFFFFF;
     }
 
     footer {
-        margin: auto;
+        text-align: center;
     }
 
     footer > p {
-        text-align: center;
         font-size: 11px;
         color: hsl(214, 17%, 51%);
+        font-weight: 500;
     }
 
     footer a {
