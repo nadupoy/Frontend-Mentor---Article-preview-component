@@ -11,14 +11,20 @@
 
 const shareButton = document.querySelector('button');
 
+
 shareButton.addEventListener('click', toggleDialog);
 
 function toggleDialog() {
     const dialogBox = document.querySelector('dialog');
+    const shareIcon = document.getElementById('share-icon');
     
     if (dialogBox.open == false) {
         dialogBox.show();
     } else {
         dialogBox.close();
     }
+
+    dialogBox.classList.toggle('show-dialog');
+    shareIcon.classList.toggle('icon-dialog-visible');
+    shareButton.classList.toggle('dialog-visible');
 }
