@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Article preview component</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&family=Montserrat:wght@200&display=swap');
   </style>
   <link rel="stylesheet" href="./style.css">
   <script src="./script.js" defer></script>
@@ -15,42 +15,39 @@
 
 <body>
   <main>
-    <img src="./images/drawers.jpg" alt="picture-of-drawers">
+    <img src="images/drawers.jpg" alt="a-picture-of-drawers">
 
     <section>
-      <div id="text">
-        <p id="header-text">
-          Shift the overall look and feel by adding these wonderful touches to furniture in your home
+      <p id="header-text">
+        <b>Shift the overall look and feel by adding these wonderful touches to furniture in your home</b>
+      </p>
+
+      <p id="body-text">
+        Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.
+      </p>
+
+      <div>
+        <img src="./images/avatar-michelle.jpg" alt="picture-of-michelle">
+
+        <p>
+          Michelle Appleton<br>
+          <span>28 Jun 2020</span>
         </p>
 
-        <p id="body-text">
-          Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and uninviting. I've got some simple tips to help you make any room feel complete.
-        </p>
-      </div>
-
-      <div class="bottom-banner">
-        <div class="user-details">
-          <img src="./images/avatar-michelle.jpg" alt="avatar_of_michelle">
-
-          <p>
-            Michelle Appleton<br>
-            <span>28 Jun 2020</span>
-          </p>
-        </div>
-
-        <div class="social-media-icons-visible">
+        <dialog>
           <p>SHARE</p>
-          <ion-icon class="social-media-icon" name="logo-facebook"></ion-icon>
-          <ion-icon class="social-media-icon" name="logo-twitter"></ion-icon>
-          <ion-icon class="social-media-icon" name="logo-pinterest"></ion-icon>
-        </div>
 
-        <ion-button class="share-button" aria-label="share-button">
-          <ion-icon class="share-icon" name="arrow-redo"></ion-icon>
-        </ion-button>
+          <ion-icon class="social-media-icons"  name="logo-facebook"></ion-icon>
+          <ion-icon class="social-media-icons"  name="logo-twitter"></ion-icon>
+          <ion-icon class="social-media-icons"  name="logo-pinterest"></ion-icon>
+        </dialog>
+
+        <button type="button">
+          <ion-icon id="share-icon" name="arrow-redo"></ion-icon>
+        </button>
       </div>
     </section>
-  </main>
+  </main>  
 
   <footer>
     <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
