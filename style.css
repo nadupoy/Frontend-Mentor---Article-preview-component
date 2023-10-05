@@ -32,7 +32,7 @@
 
     section {
         background-color: #FFFFFF;
-        padding-bottom: 16px;
+        /* padding-bottom: 24px; */
         border-radius: 0px 0px 16px 16px;
     }
 
@@ -53,14 +53,60 @@
         font-weight: 500;
         color: hsl(214, 17%, 51%);
         line-height: 1.5;
-        margin-bottom: 16px;
+        margin-bottom: 8px;
     }
 
-    div {
+    section > div {
         width: 256px;
         margin: auto;
         display: grid;
-        grid-template-columns: 20% 60% 20%;
+        grid-template-columns: 80% 20%;
+        padding-bottom: 16px;
+        padding-top: 16px;
+    }
+
+    .share {
+        background-color: hsl(214, 17%, 51%);
+        padding-left: 32px;
+        padding-right: 32px;
+        border-radius: 0px 0px 16px 16px;
+    }
+
+    .michelle-appleton {
+        display: grid;
+        grid-template-columns: 20% 80%;
+    }
+
+    .michelle-appleton-hidden {
+        display: none;
+    }
+
+    .social-media-icons-hidden {
+        display: none;
+    }
+
+    .social-media-icons {
+        display: grid;        
+        grid-template-columns: 30% 20% 20% 20%;
+        align-items: center;
+        justify-content: left;
+        height: 48px;
+    }
+
+    .social-media-icons > p {
+        color: #FFFFFF;
+        margin-left: 0;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 200;
+        letter-spacing: 2px;
+    }
+
+    .dialog-arrow-hidden {
+        display: none;
+    }
+
+    .dialog-arrow {
+        display: none;
     }
 
     div > img {
@@ -73,7 +119,7 @@
         font-size: 13px;
         font-weight: 700;
         color: hsl(217, 19%, 35%);
-        margin-left: 8px;
+        margin-left: 16px;
     }
 
     span {
@@ -81,50 +127,22 @@
         color: hsl(212, 23%, 69%);
     }
 
-    .show-dialog {
-        border: none;
-        width: 290px;
-        display: grid;
-        grid-template-columns: 25% 15% 15% 15% auto;
-        align-items: center;
-        background-color: hsl(217, 19%, 35%);
-        color: #FFFFFF;
-        margin: auto;
-        border-radius: 0px 0px 16px 16px;
-    }
-
-    dialog > p {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 13px;
-        margin-left: 16px;
-    }
-
-    .social-media-icons {
-        font-size: 24px;
-        justify-self: center;
-    }
-
     button {
-        background-color: hsl(210, 46%, 95%);
         border: none;
+        background-color: hsl(210, 46%, 95%);
         width: 40px;
         height: 40px;
         border-radius: 20px;
         align-self: center;
-        z-index: 1;
+        justify-self: end;
     }
 
-    .dialog-visible {
-        background-color: hsl(214, 17%, 51%);
-        color: #FFFFFF;
+    .toggle-share-icons {
+        background-color: hsl(212, 23%, 69%);
     }
 
-    #share-icon {
-        color: hsl(217, 19%, 35%);
-    }
-
-    .icon-dialog-visible {
-        color: #FFFFFF;
+    .share-icon-color {
+        fill: #FFFFFF;
     }
 
     footer {
@@ -139,6 +157,174 @@
 
     footer a {
         color: hsl(217, 19%, 35%);
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    footer a:visited {
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    * {
+        margin: 0;
+        font-family: 'Manrope', sans-serif;
+    }
+
+    html {
+        height: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body {
+        background-color: hsl(210, 46%, 95%);
+        display: grid;
+    }
+
+    main {
+        display: flex;
+        margin: auto;
+        height: 360px;
+        margin-bottom: 16px;
+    }
+
+    main > img {
+        width: 366px;
+        object-fit: cover;
+        object-position: 0% 0%;
+        border-radius: 16px 0px 0px 16px;
+    }
+
+    section {
+        background-color: #FFFFFF;
+        width: 520px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0px 16px 16px 0px;
+    }
+
+    section > p {
+        width: 424px;
+    }
+
+    #header-text {
+        font-size: x-large;
+        font-weight: 700;
+        color: hsl(217, 19%, 35%);
+        margin-bottom: 16px;
+    }
+
+    #body-text {
+        font-weight: 500;
+        color: hsl(214, 17%, 51%);
+        line-height: 1.5;
+        margin-bottom: 24px;
+    }
+
+    section > div {
+        width: 424px;
+        display: grid;
+        grid-template-columns: 80% 20%;
+    }
+
+    .michelle-appleton {
+        display: grid;
+        grid-template-columns: 20% 80%;
+    }
+
+    /* .michelle-appleton-hidden {
+        display: grid;
+        grid-template-columns: 20% 80%;
+    } */
+
+    .social-media-icons-hidden {
+        display: none;
+    }
+
+    .social-media-icons {
+        position: absolute;
+        bottom: 260px;
+        right: 218px;
+        background-color: hsl(217, 19%, 35%);
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        align-items: center;
+        width: 240px;
+        padding: 16px 8px;
+        border-radius: 8px;
+    }
+
+    .social-media-icons > p {
+        color: #FFFFFF;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 200;
+        letter-spacing: 2px;
+    }
+
+    .dialog-arrow-hidden {
+        display: none;
+    }
+
+    .dialog-arrow {
+        display: inline;
+        position: absolute;
+        bottom: 245px;
+        right: 333px;
+    }
+
+    div > img {
+        width: 48px;
+        border-radius: 24px;
+    }
+
+    div > p {
+        align-self: center;
+        font-weight: 700;
+        color: hsl(217, 19%, 35%);
+        margin-left: 8px;
+    }
+
+    span {
+        font-weight: 500;
+        color: hsl(212, 23%, 69%);
+    }
+
+    button {
+        border: none;
+        background-color: hsl(210, 46%, 95%);
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        align-self: center;
+        justify-self: end;
+    }
+
+    .toggle-share-icons {
+        background-color: hsl(214, 17%, 51%);
+    }
+
+    .share-icon-color {
+        fill: #FFFFFF;
+    }
+
+    footer {
+        text-align: center;
+        width: 1200px;
+    }
+
+    footer > p {
+        font-size: 11px;
+        color: hsl(214, 17%, 51%);
+        font-weight: 500;
+    }
+
+    footer a {
+        color:hsl(217, 19%, 35%);
         font-weight: 700;
         text-decoration: none;
     }
