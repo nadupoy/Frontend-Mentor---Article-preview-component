@@ -11,20 +11,19 @@
 
 const shareButton = document.querySelector('button');
 
-
 shareButton.addEventListener('click', toggleDialog);
 
 function toggleDialog() {
-    const dialogBox = document.querySelector('dialog');
-    const shareIcon = document.getElementById('share-icon');
-    
-    if (dialogBox.open == false) {
-        dialogBox.show();
-    } else {
-        dialogBox.close();
-    }
+    const shareIcon = document.querySelector('#path2');
+    const michelleAppleton = document.querySelector('.michelle-appleton');
+    const socialMediaIcons = document.querySelector('.social-media-icons-hidden');
+    const shareBackground = document.querySelector('section > div');
+    const dialogArrow = document.querySelector('#svg1');
 
-    dialogBox.classList.toggle('show-dialog');
-    shareIcon.classList.toggle('icon-dialog-visible');
-    shareButton.classList.toggle('dialog-visible');
+    shareButton.classList.toggle('toggle-share-icons');
+    shareIcon.classList.toggle('share-icon-color');
+    michelleAppleton.classList.toggle('michelle-appleton-hidden');
+    socialMediaIcons.classList.toggle('social-media-icons');
+    shareBackground.classList.toggle('share');
+    dialogArrow.classList.toggle('dialog-arrow');
 }
