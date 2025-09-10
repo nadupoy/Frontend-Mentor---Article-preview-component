@@ -193,6 +193,10 @@
     font-size: 1.5rem;
   }
 
+  #share-icon {
+    display: none;
+  }
+
   .share-icon-active {
     grid-column-start: 5;
     grid-column-end: 6;
@@ -210,6 +214,10 @@
   .share-icon-active-state {
     margin: auto;
     color: white;
+  }
+
+  .caret-down-default {
+    display: none;
   }
 
   footer {
@@ -340,11 +348,80 @@
     display: grid;
   }
 
+  .share-icon-active {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border: none;
+    background-color: var(--very-dark-grayish-blue);
+    width: 40px;
+    height: 40px;
+    align-self: center;
+    justify-self: right;
+    border-radius: 20px;
+    color: white;
+    font-size: 1.25rem;
+    display: grid;
+    anchor-name: --social-media;
+  }
+
   [alt="share-icon"] {
     margin: auto;
   }
 
   .active-state-hidden {
+    display: none;
+  }
+
+  .active-state {
+    position: absolute;
+    position-anchor: --social-media;
+    background-color: var(--very-dark-grayish-blue);
+    height: 40px;
+    width: 200px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 24px;
+    padding-right: 24px;
+    bottom: calc(anchor(top) + 24px);
+    justify-self: anchor-center;
+    anchor-name: --caret-down;
+  }
+
+  #share-icon {
+    display: none;
+  }
+
+  .caret-down-default {
+    display: none;
+  }
+
+  .caret-down-active {
+    position: absolute;
+    position-anchor: --caret-down;
+    top: calc(anchor(bottom) - 8px);
+    justify-self: anchor-center;
+    font-size: 1.5rem;
+    color: var(--very-dark-grayish-blue);
+  }
+
+  .active-state > p {
+    color: var(--grayish-blue);
+    letter-spacing: 0.25rem;
+    font-size: 0.85rem;
+  }
+
+  [alt="facebook-icon"],
+  [alt="twitter-icon"],
+  [alt="pinterest-icon"] {
+    color: white;
+    font-size: 1.25rem;
+  }
+
+  .active-state > button {
     display: none;
   }
 
