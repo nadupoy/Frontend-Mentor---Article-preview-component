@@ -102,6 +102,26 @@ I resolved the issue by using the `--allow-unrelated-histories-flag` when runnin
 git pull origin main --allow-unrelated-histories
 ```
 
+**5. The `remove()` method of the `DOMTokenList` interface**
+
+This method is used to remove a class or classes from a `html` element using JavaScript as shown below:
+
+```javascript
+function hideIcons() {
+  nameCard.classList.remove("name-card-active");
+  defaultState.classList.remove("default-state-hidden");
+  socialMedia.classList.remove("active-state");
+}
+```
+
+**6. Deleting the remote _Github_ origin of a branch using _Git_**
+
+This is done using the following Git command:
+
+```
+git push origin --delete code-refactor
+```
+
 ### Continued development
 
 - Element positioning in CSS.
@@ -114,6 +134,7 @@ _N/B: The positioning of the share icons on desktop devices still needs correcti
 
 - [MDN Web Docs](https://developer.mozilla.org/en-US/)
 - [W3 Schools](https://www.w3schools.com/)
+- [HTML Element `classList` property](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList#value)
 
 ## Author
 
