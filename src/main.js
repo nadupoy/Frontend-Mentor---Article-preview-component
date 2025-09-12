@@ -1,20 +1,19 @@
-const nameCard = document.querySelector(".name-card-default");
-const defaultState = document.querySelector(".default-state");
-const shareButton = document.querySelector(".share-icon-default");
-const socialMedia = document.querySelector(".active-state-hidden");
-const hideButton = document.querySelector(".share-icon-active");
+const shareButton = document.getElementById("share-button");
+const nameCard = document.querySelector(".name-card");
+const author = document.querySelector(".author");
+const socialMedia = document.querySelector(".hide");
+const shareIcon = document.querySelector(".share-icon");
 
-function showIcons() {
-  nameCard.classList.toggle("name-card-active");
-  defaultState.classList.toggle("default-state-hidden");
-  socialMedia.classList.toggle("active-state");
+let screenWidth = screen.width;
+
+shareButton.addEventListener("click", toggleShare);
+
+function toggleShare() {
+  if (screenWidth >= 320 && screenWidth <= 768) {
+    nameCard.classList.toggle("name-card-active");
+    author.classList.toggle("hide");
+    socialMedia.classList.toggle("social-media-icons");
+    shareButton.classList.toggle("share-button-active");
+    shareIcon.classList.toggle("share-icon-active");
+  }
 }
-
-function hideIcons() {
-  nameCard.classList.remove("name-card-active");
-  defaultState.classList.remove("default-state-hidden");
-  socialMedia.classList.remove("active-state");
-}
-
-shareButton.addEventListener("click", showIcons);
-hideButton.addEventListener("click", hideIcons);
