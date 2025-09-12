@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/images/favicon-32x32.png" />
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/style-alt.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Mentor | Article preview component</title>
   </head>
@@ -30,37 +30,35 @@
           </p>
         </div>
 
-        <div class="name-card-active">
-          <div class="name-card-details-hidden">
-            <img
-              src="images/avatar-michelle.jpg"
-              alt="avatar-of-michelle"
-              class="avatar"
-            />
-            <p class="name">Michelle Appleton</p>
-            <p class="date">28 Jun 2020</p>
-            <button id="share-button" class="share-button-hidden">
-              <ion-icon name="arrow-redo" alt="share-icon"></ion-icon>
-            </button>
-          </div>
+        <div class="name-card">
+          <div class="card-details">
+            <div class="author">
+              <img
+                src="images/avatar-michelle.jpg"
+                alt="avatar-of-michelle"
+                class="avatar"
+              />
+              <p class="name">Michelle Appleton</p>
+              <p class="date">28 Jun 2020</p>
+            </div>
 
-          <div class="social-media-container">
-            <div class="social-media-icons">
+            <div class="hide">
               <p>SHARE</p>
               <ion-icon name="logo-facebook" alt="facebook-icon"></ion-icon>
               <ion-icon name="logo-twitter" alt="twitter-icon"></ion-icon>
               <ion-icon name="logo-pinterest" alt="pinterest-icon"></ion-icon>
+              <ion-icon
+                name="caret-down"
+                alt="caret-down"
+                class="caret-down-default"
+              ></ion-icon>
             </div>
-            <ion-icon
-              name="caret-down"
-              alt="caret-down"
-              class="caret-down-default"
-            ></ion-icon>
-            <button id="hide-button">
+
+            <button id="share-button" class="share-button-default">
               <ion-icon
                 name="arrow-redo"
-                alt="hide-icon"
-                class="share-icon-active-state"
+                alt="share-icon"
+                class="share-icon"
               ></ion-icon>
             </button>
           </div>
