@@ -1,34 +1,19 @@
 const shareButton = document.getElementById("share-button");
-const hideButton = document.getElementById("hide-button");
 const nameCard = document.querySelector(".name-card");
-const nameCardDetails = document.querySelector(".name-card-details");
-const socialMediaContainer = document.querySelector(
-  ".social-media-container-hidden",
-);
-const avatar = document.querySelector(".avatar");
-const name = document.querySelector(".name");
-const date = document.querySelector(".date");
+const author = document.querySelector(".author");
+const socialMedia = document.querySelector(".hide");
+const shareIcon = document.querySelector(".share-icon");
 
 let screenWidth = screen.width;
 
-shareButton.addEventListener("click", show);
-hideButton.addEventListener("click", hide);
+shareButton.addEventListener("click", toggleShare);
 
-function show() {
+function toggleShare() {
   if (screenWidth >= 320 && screenWidth <= 768) {
     nameCard.classList.toggle("name-card-active");
-    avatar.classList.toggle("hide");
-    name.classList.toggle("hide");
-    date.classList.toggle("hide");
-    socialMediaContainer.classList.toggle("social-media-container");
+    author.classList.toggle("hide");
+    socialMedia.classList.toggle("social-media-icons");
+    shareButton.classList.toggle("share-button-active");
+    shareIcon.classList.toggle("share-icon-active");
   }
 }
-
-function hide() {}
-
-console.log(shareButton);
-console.log(hideButton);
-console.log(nameCard);
-console.log(nameCardDetails);
-console.log(socialMediaContainer);
-console.log(screenWidth);
